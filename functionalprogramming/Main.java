@@ -15,6 +15,7 @@ public class Main {
                 new Person("Virat", Gender.MALE),
                 new Person("Sejal",Gender.FEMALE)
         );
+        //Imperative approach
         //List of all females
         List<Person> females = new ArrayList<>();
         for ( Person person : people){
