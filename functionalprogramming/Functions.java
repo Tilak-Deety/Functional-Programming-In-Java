@@ -7,4 +7,5 @@ public class Functions {
         System.out.println(greetFunction.apply("Welcome "));
     }
     static Function<String, String> greetFunction = message -> message + "Tilak";
+
 }
