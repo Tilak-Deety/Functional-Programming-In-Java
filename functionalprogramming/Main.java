@@ -12,9 +12,11 @@ public class Main {
                 new Person("Aishwarya",Gender.FEMALE),
                 new Person("Kunal", Gender.MALE),
                 new Person("Samantha",Gender.FEMALE),
+                new Person("Annee",Gender.TRANSGENDER),
                 new Person("Amrutha",Gender.FEMALE),
                 new Person("Virat", Gender.MALE),
-                new Person("Sejal",Gender.FEMALE)
+                new Person("Sejal",Gender.FEMALE),
+                new Person("Shake",Gender.TRANSGENDER)
         );
         //Imperative approach
         //List of all females
@@ -57,6 +59,13 @@ public class Main {
                 .collect(Collectors.toList());
         males2.forEach(System.out::println);
 
+        //List of Transgender
+        System.out.println("list of all Transgenders");
+        List<Person> transgender = people.stream()
+                .filter(person -> Gender.TRANSGENDER.equals(person.gender))
+                .collect(Collectors.toList());
+        transgender.forEach(System.out::println);
+
 
     }
     static class Person{
@@ -76,7 +85,7 @@ public class Main {
         }
     }
     enum Gender{
-        MALE,FEMALE
+        MALE,FEMALE,TRANSGENDER
     }
 }
 
